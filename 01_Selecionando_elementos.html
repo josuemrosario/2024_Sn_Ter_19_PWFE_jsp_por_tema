@@ -27,10 +27,15 @@
         console.log("------------------------------------------------------------")
 
         // Mostre na console o elmento com id nivel1
-
-
+        console.log(document.getElementById("nivel1"))
+        titulo1 = document.getElementById("nivel1")
+        console.log(titulo1.innerHTML)
+        
 
         // Modifique o innerHTML do nivel 1 para seu nome - getElementByIDd()
+        titulo1.innerHTML = "Josue Rosario"
+
+
 
 
 
@@ -39,13 +44,16 @@
 
 
         //Mostrar na console todos os elementos que possuam a class conjunto1 - getElementsByClassName()
+        console.log(document.getElementsByClassName('conjunto1'))
         
 
         //Mostrar na console todos os elementos com tag h1 - getElementsByTagName()
+        console.log(document.getElementsByTagName('h1'))
         
 
         //Modifique para mostrar todos os elementos com nome ipt_cad
         //observar o tipo de retorno.
+        console.log(document.getElementsByName("ipt_cad"))
         
 
         console.log("Usando QuerySelector() e QuerySelectorAll")
@@ -53,6 +61,21 @@
 
         //Use QuerySelector para realizar as atividades anteriores
         //Observe a diferença entre querySelector e querySelectorAll
+        console.log(document.querySelector("#nivel1"))
+        console.log(document.querySelectorAll('.conjunto1'))
+        teste = document.querySelectorAll('.conjunto1')
+        
+        // Iterando por cada elemento
+        teste.forEach(element => {
+            console.log(element.id," - ",element.innerHTML)
+        });
+        
+        // function algumnome(element) {
+        //     console.log(element.id," - ",element.innerHTML)
+        // }
+
+
+
         
     </script>
 </html>

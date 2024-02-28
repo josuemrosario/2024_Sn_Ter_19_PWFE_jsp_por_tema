@@ -19,11 +19,26 @@
     </ul>
     
     <script>
+        window.addEventListener("load",()=>{
+            //alert('acabou de carregar estou muito feliz')
+
         //Criar objetos com os campos de entrada, a lista nao ordenada e o botao
+        iptAtividade = document.querySelector("#atividade")
+        btnAdd = document.querySelector("#btn_add")
+        lstAtividade = document.querySelector("#listasaida")
 
 
         // Adicionar um eventListener executado ao evento click
         // A partir da Execucao deve adicionar a atividade na lista
+            btnAdd.addEventListener("click",()=>{
+                
+                lstAtividade.innerHTML += '<li>' + iptAtividade.value + '</li>'
+                iptAtividade.value = ''
+
+            })
+
+        })
+
 
     </script>
 
